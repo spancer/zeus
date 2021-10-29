@@ -72,17 +72,17 @@ public class MessageChannelHandler extends ChannelInboundHandlerAdapter {
 
   @Override
   public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
-    logger.info("netty通道注册: {}", ctx.channel().isRegistered());
+    logger.info("netty chanel registered: {}", ctx.channel().isRegistered());
   }
 
   @Override
   public void channelUnregistered(ChannelHandlerContext ctx) throws Exception {
-    logger.info("取消netty通道注册: {}", ctx.channel().isRegistered());
+    logger.info("netty channel unregistered: {}", ctx.channel().isRegistered());
   }
 
   @Override
   public void channelInactive(ChannelHandlerContext ctx) throws Exception {
-    logger.info("通道失去连接：{}", ctx.channel().isActive());
+    logger.info("channel inactive：{}", ctx.channel().isActive());
   }
 
   @Override
