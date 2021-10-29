@@ -1,0 +1,5 @@
+cluster.name: hermes
+#unicast.hosts: 127.0.0.1:9400
+#node.local: false
+
+

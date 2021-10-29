@@ -1,0 +1,19 @@
+hermes.logger.level: INFO
+rootLogger: ${hermes.logger.level}, console, file
+logger:
+  action: DEBUG
+
+appender:
+  console:
+    type: console
+    layout:
+      type: org.apache.log4j.PatternLayout
+      conversionPattern: "[%d{ISO8601}][%-5p][%-25c] %m%n"
+  file:
+    type: rollingFile
+    file: ${path.logs}/${cluster.name}.log
+    maxFileSize: 10000000   #10M时滚动一次
+    maxBackupIndex: 5
+    layout:
+      type: org.apache.log4j.PatternLayout
+      conversionPattern: "[%d{ISO8601}][%-5p][%-25c] %.10000m%n"

@@ -1,0 +1,230 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<artifactId>hermes-engine</artifactId>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+				<groupId>org.apache.maven.plugins</groupId>
+				<version>2.3.2</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+				<groupId>org.apache.maven.plugins</groupId>
+				<version>2.22.2</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<id>attach-sources</id>
+					</execution>
+				</executions>
+				<groupId>org.apache.maven.plugins</groupId>
+				<version>3.2.1</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-shade-plugin</artifactId>
+				<executions>
+					<execution>
+						<configuration>
+							<transformers>
+								<transformer
+									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+									<mainClass>io.hermes.bootstrap.Bootstrap</mainClass>
+								</transformer>
+							</transformers>
+						</configuration>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<phase>package</phase>
+					</execution>
+				</executions>
+				<groupId>org.apache.maven.plugins</groupId>
+				<version>3.2.4</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<appendAssemblyId>false</appendAssemblyId>
+					<outputDirectory>${project.build.directory}/releases/</outputDirectory>
+					<descriptors>
+						<descriptor>${basedir}/src/main/assemblies/zip-bin.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<artifactId>mybatis-guice</artifactId>
+			<groupId>org.mybatis</groupId>
+			<version>${mybatis-guice.version}</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>guice</artifactId>
+			<groupId>com.google.inject</groupId>
+			<version>${guice.version}</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>guice-assistedinject</artifactId>
+			<groupId>com.google.inject.extensions</groupId>
+			<version>${guice.version}</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>guice-multibindings</artifactId>
+			<groupId>com.google.inject.extensions</groupId>
+			<version>${guice.version}</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>guava</artifactId>
+			<groupId>com.google.guava</groupId>
+			<version>27.1-jre</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>netty-all</artifactId>
+			<groupId>io.netty</groupId>
+			<version>${netty.version}</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>snakeyaml</artifactId>
+			<groupId>org.yaml</groupId>
+			<version>${snakeyaml.version}</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>slf4j-api</artifactId>
+			<groupId>org.slf4j</groupId>
+			<optional>true</optional>
+			<scope>compile</scope>
+			<version>1.7.30</version>
+		</dependency>
+		<dependency>
+			<artifactId>slf4j-log4j12</artifactId>
+			<groupId>org.slf4j</groupId>
+			<optional>true</optional>
+			<scope>compile</scope>
+			<version>1.7.30</version>
+		</dependency>
+		<dependency>
+			<artifactId>log4j</artifactId>
+			<groupId>log4j</groupId>
+			<optional>true</optional>
+			<scope>compile</scope>
+			<version>1.2.17</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>jackson-databind</artifactId>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>jackson-core</artifactId>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>jackson-dataformat-smile</artifactId>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>jackson-dataformat-yaml</artifactId>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>jackson-dataformat-cbor</artifactId>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>joda-time</artifactId>
+			<groupId>joda-time</groupId>
+			<version>2.10.10</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>HikariCP</artifactId>
+			<groupId>com.zaxxer</groupId>
+			<version>3.4.5</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>mybatis</artifactId>
+			<groupId>org.mybatis</groupId>
+			<version>3.5.6</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>mysql-connector-java</artifactId>
+			<groupId>mysql</groupId>
+			<version>8.0.22</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>jedis</artifactId>
+			<groupId>redis.clients</groupId>
+			<version>3.3.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<description>
+	Zeus is an open source, analytical engine for big data hold in data lake; it was designed to provide OLAP (Online Analytical Processing) capability in the big data era. You can use zeus to store, query,analysis, and manage data.
+  </description>
+
+	<groupId>io.hermes</groupId>
+
+	<modelVersion>4.0.0</modelVersion>
+	<properties>
+		<guava.version>27.1-jre</guava.version>
+		<guice.version>4.2.3</guice.version>
+		<jackson.version>2.11.4</jackson.version>
+		<mybatis-guice.version>3.12</mybatis-guice.version>
+		<netty.version>4.1.63.Final</netty.version>
+		<snakeyaml.version>1.27</snakeyaml.version>
+	</properties>
+
+	<version>0.1</version>
+
+</project>

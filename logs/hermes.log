@@ -1,0 +1,31 @@
+[2021-10-29 11:30:16,712][INFO ][node                     ] [May"Mayday"Parker] {Hermes-Engine/0.0.0}[35260]: Initializing ...
+[2021-10-29 11:30:17,212][INFO ][node                     ] [May"Mayday"Parker] {Hermes-Engine/0.0.0}[35260]: Initialized
+[2021-10-29 11:30:17,213][INFO ][node                     ] [May"Mayday"Parker] {Hermes-Engine/0.0.0}[35260]: Starting ...
+[2021-10-29 11:30:18,188][INFO ][transport                ] [May"Mayday"Parker] bound_address[inet[/127.0.0.1:9400]], publish_address[inet[/127.0.0.1:9400]]
+[2021-10-29 11:30:18,194][INFO ][cluster.service          ] [May"Mayday"Parker] New Master [May"Mayday"Parker][1][inet[/127.0.0.1:9400]]
+[2021-10-29 11:30:18,214][INFO ][transport.netty          ] [May"Mayday"Parker] netty通道注册: true
+[2021-10-29 11:30:18,214][INFO ][transport.netty          ] [May"Mayday"Parker] netty通道注册: true
+[2021-10-29 11:30:18,214][INFO ][transport.netty          ] [May"Mayday"Parker] netty通道注册: true
+[2021-10-29 11:30:18,214][INFO ][transport.netty          ] [May"Mayday"Parker] netty通道注册: true
+[2021-10-29 11:30:18,214][INFO ][transport.netty          ] [May"Mayday"Parker] netty通道注册: true
+[2021-10-29 11:30:18,218][INFO ][transport.netty          ] [May"Mayday"Parker] 有新客户端接入: /127.0.0.1:64599
+[2021-10-29 11:30:18,218][INFO ][transport.netty          ] [May"Mayday"Parker] 有新客户端接入: /127.0.0.1:64598
+[2021-10-29 11:30:18,218][INFO ][transport.netty          ] [May"Mayday"Parker] 有新客户端接入: /127.0.0.1:64600
+[2021-10-29 11:30:18,218][INFO ][transport.netty          ] [May"Mayday"Parker] 有新客户端接入: /127.0.0.1:64601
+[2021-10-29 11:30:18,218][INFO ][transport.netty          ] [May"Mayday"Parker] 有新客户端接入: /127.0.0.1:64597
+[2021-10-29 11:30:18,220][INFO ][discovery                ] [May"Mayday"Parker] hermes/1
+[2021-10-29 11:30:18,220][INFO ][node                     ] [May"Mayday"Parker] {Hermes-Engine/0.0.0}[35260]: Started
+[2021-10-29 11:30:18,223][INFO ][transport.netty          ] [May"Mayday"Parker] netty通道注册: true
+[2021-10-29 11:30:18,223][INFO ][transport.netty          ] [May"Mayday"Parker] netty通道注册: true
+[2021-10-29 11:30:18,223][INFO ][transport.netty          ] [May"Mayday"Parker] netty通道注册: true
+[2021-10-29 11:30:18,223][INFO ][transport.netty          ] [May"Mayday"Parker] netty通道注册: true
+[2021-10-29 11:30:18,223][INFO ][transport.netty          ] [May"Mayday"Parker] netty通道注册: true
+[2021-10-29 11:30:18,223][INFO ][transport.netty          ] [May"Mayday"Parker] 有新客户端接入: /127.0.0.1:9400
+[2021-10-29 11:30:18,223][INFO ][transport.netty          ] [May"Mayday"Parker] 有新客户端接入: /127.0.0.1:9400
+[2021-10-29 11:30:18,223][INFO ][transport.netty          ] [May"Mayday"Parker] 有新客户端接入: /127.0.0.1:9400
+[2021-10-29 11:30:18,223][INFO ][transport.netty          ] [May"Mayday"Parker] 有新客户端接入: /127.0.0.1:9400
+[2021-10-29 11:30:18,223][INFO ][transport.netty          ] [May"Mayday"Parker] 有新客户端接入: /127.0.0.1:9400
+[2021-10-29 11:31:19,678][INFO ][node                     ] [May"Mayday"Parker] {Hermes-Engine/0.0.0}[35260]: Stopping ...
+[2021-10-29 11:31:19,683][INFO ][node                     ] [May"Mayday"Parker] {Hermes-Engine/0.0.0}[35260]: Stopped
+[2021-10-29 11:31:19,683][INFO ][node                     ] [May"Mayday"Parker] {Hermes-Engine/0.0.0}[35260]: Closing ...
+[2021-10-29 11:31:19,686][INFO ][node                     ] [May"Mayday"Parker] {Hermes-Engine/0.0.0}[35260]: Closed
