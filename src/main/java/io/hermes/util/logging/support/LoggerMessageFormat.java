@@ -73,9 +73,6 @@ public class LoggerMessageFormat {
             sbuf.append(DELIM_START);
             i = j + 1;
           } else {
-            // The escape character preceding the delimiter start is
-            // itself escaped: "abc x:\\{}"
-            // we have to consume one backward slash
             sbuf.append(messagePattern, i, j - 1);
             deeplyAppendParameter(sbuf, argArray[L], new HashMap());
             i = j + 2;
